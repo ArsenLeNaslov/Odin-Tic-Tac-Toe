@@ -11,10 +11,10 @@ Live preview: [Odin's Tic Tac Toe](https://arsenlenaslov.github.io/tic-tac-toe/)
 
 ### Game Modes
 - **Two Players (PvP)** : Play locally against another person on the same device
-- **Play vs Computer (PvC)** : Challenge an AI ohttps://arsenlenaslov.github.io/tic-tac-toe/pponent with three difficulty levels:
-- **Easy** : Random moves (unpredictable but beatable)
-- **Intermediate** : Smart move selection with 30% random moves (balanced challenge)
-- **Hard** : Minimax algorithm for optimal play (unbeatable)
+- **Play vs Computer (PvC)** : Challenge the Computerwith three difficulty levels:
+  - **Easy** : Random moves (unpredictable but beatable)
+  - **Intermediate** : Smart move selection with 30% random moves (balanced challenge)
+  - **Hard** : Minimax algorithm for optimal play (unbeatable)
 
 ### Game Management
 - **Live Scoreboard** : Tracks wins for Player X, Player O, and draws across multiple games
@@ -67,7 +67,7 @@ tic-tac-toe/
 
 ## Architecture
 
-The JavaScript is organized into four self-contained modules:
+The JavaScript is organised into four self-contained modules:
 
 ### Gameboard Module
 Manages the 3×3 board state with methods for:

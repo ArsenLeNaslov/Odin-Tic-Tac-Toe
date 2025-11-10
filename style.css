@@ -293,3 +293,235 @@ button#reset-scoreboard {
 button#reset-scoreboard:hover {
     box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
 }
+
+/* Player Marks - Styling for X and O markers */
+.mark-x {
+    color: #e74c3c;
+    text-shadow: 2px 2px 4px rgba(231, 76, 60, 0.3);
+    animation: fadeIn 0.4s ease;
+}
+
+.mark-o {
+    color: #3498db;
+    text-shadow: 2px 2px 4px rgba(52, 152, 219, 0.3);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1) rotate(10deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Emoji Images - Styling for animated game status indicators */
+.emoji {
+    width: 2.6em;
+    height: 2.6em;
+    vertical-align: middle;
+    margin: 0 0.25em;
+    display: inline-block;
+    object-fit: contain;
+}
+
+/* Make reset buttons slightly larger and more prominent */
+button#reset-game,
+button#reset-scoreboard {
+    font-size: 1.05rem;
+    padding: 16px 26px;
+}
+
+/* Victory Effect - Animation and styling for winning combinations */
+.winning-line {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important;
+    color: white !important;
+    animation: celebration 0.6s ease infinite alternate;
+    box-shadow: 0 0 20px rgba(39, 174, 96, 0.5);
+}
+
+@keyframes celebration {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(39, 174, 96, 0.5);
+    }
+
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(39, 174, 96, 0.8);
+    }
+}
+
+/* Responsive Design - Small screens (mobile) */
+@media (max-width: 400px) {
+    body {
+        padding: 10px;
+    }
+
+    .game-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    .board {
+        max-width: 280px;
+        padding: 10px;
+    }
+
+    .cell {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        min-height: 60px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 220px;
+        min-width: auto;
+    }
+
+    /* Scale down emojis and reset buttons on small screens */
+    .emoji {
+        width: 1.6em;
+        height: 1.6em;
+    }
+
+    button#reset-game,
+    button#reset-scoreboard {
+        font-size: 0.95rem;
+        padding: 12px 18px;
+    }
+
+    /* Make current-turn smaller on very small screens to keep layout tidy */
+    .current-turn {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .scoreboard {
+        padding: 12px;
+    }
+
+    .score {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design - Short height screens */
+@media (max-height: 700px) {
+    .game-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .scoreboard {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .board {
+        max-width: 260px;
+        margin: 15px auto;
+    }
+
+    .cell {
+        font-size: clamp(1.8rem, 8vw, 3rem);
+        min-height: 55px;
+    }
+
+    .game-message {
+        margin: 15px 0;
+        font-size: 1.1rem;
+        min-height: 35px;
+        padding: 10px;
+    }
+
+    .controls {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Responsive Design - Large screens (desktop) */
+@media (min-width: 1200px) {
+    .game-container {
+        max-width: 460px;
+        padding: 30px;
+    }
+
+    .board {
+        max-width: 340px;
+    }
+
+    .cell {
+        font-size: clamp(2.5rem, 6vw, 4.2rem);
+        min-height: 85px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Background Effects - Optional particle overlay effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  font-size: 16px;
+  margin-top: 22px;
+  text-align: center;
+  text-shadow: 4px 4px 20px darkblue;
+}
+
+footer a {
+  text-decoration: none;
+  background: linear-gradient(135deg, #8ab4ff 0%, #5867dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: normal;
+}
+
+footer a:hover {
+  text-shadow: 0 0 10px rgba(138, 180, 255, 0.5);
+}

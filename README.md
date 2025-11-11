@@ -1,6 +1,6 @@
 # Odin's Tic Tac Toe
 
-A modern space-themed, feature-rich implementation of the classic Tic Tac Toe game built with vanilla JavaScript, HTML, and CSS. 
+A modern nebula-themed, feature-rich implementation of the classic Tic Tac Toe game built with vanilla JavaScript, HTML, and CSS. 
 Play against another player or challenge an AI opponent with adjustable difficulty levels.
 
 Referencing Odin's Project: [Tic Tac Toe](https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe)
